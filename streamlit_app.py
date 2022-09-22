@@ -26,14 +26,10 @@ streamlit.write('The user entered ', fruit_choice)
 
 
 #normaliza a resposta json
-#fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# envia a tabela de output
-#streamlit.dataframe(fruityvice_normalized)
-
-#normaliza a resposta json
-fruityvice_normalized = pandas.json_normalize(fruit_choice.json())
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # envia a tabela de output
 streamlit.dataframe(fruityvice_normalized)
+
 
 
 
