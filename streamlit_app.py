@@ -17,7 +17,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/")
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/")
 
 streamlit.header('Fruityvice Fruit Advice!')
 
@@ -26,8 +26,14 @@ streamlit.write('The user entered ', fruit_choice)
 
 
 #normaliza a resposta json
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+#fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# envia a tabela de output
+#streamlit.dataframe(fruityvice_normalized)
+
+#normaliza a resposta json
+fruityvice_normalized = pandas.json_normalize(fruit_choice.json())
 # envia a tabela de output
 streamlit.dataframe(fruityvice_normalized)
+
 
 
